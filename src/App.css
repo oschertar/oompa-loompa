@@ -1,5 +1,21 @@
+.navbar-container {
+  background-color: #8a8a8a;
+  padding: 16px;
+}
+
+.navbar-container div {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+main {
+  padding: 24px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 16px;
+  max-width: 1320px;
+  margin: 0 auto;
 }

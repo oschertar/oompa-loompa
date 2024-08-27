@@ -19,14 +19,25 @@ function App() {
   }, [])
 
   return (
-    <div className="grid-container">
-      {resultsOompaLoompa.length ?
-        resultsOompaLoompa.map((item: OompaLoompa) =>
-          <Card key={item.id} oompaLoompa={item}>
-          </Card>
-        )
-        : null}
-    </div>
+    <>
+      <nav className="navbar-container">
+        <div>
+          Oompa Loompa's Crew
+        </div>
+      </nav>
+      <main>
+        <h2>Find our Oompa Loompa</h2>
+        <h3>There are more than 100k</h3>
+        <div className="grid-container">
+          {resultsOompaLoompa.length ?
+            resultsOompaLoompa.map((item: OompaLoompa) =>
+              <Card key={item.id} oompaLoompa={item}>
+              </Card>
+            )
+            : null}
+        </div>
+      </main>
+    </>
   )
 }
 
