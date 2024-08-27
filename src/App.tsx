@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { apiService } from './services/api';
 import { ApiResponse, OompaLoompa } from './types/api';
+import Card from './components/card/Card';
 
 function App() {
   const [page, setPage] = useState<number>(1);
@@ -18,15 +19,14 @@ function App() {
   }, [])
 
   return (
-    <>
+    <div className="grid-container">
       {resultsOompaLoompa.length ?
         resultsOompaLoompa.map((item: OompaLoompa) =>
-          <div key={item.id}>
-            {item.first_name}
-          </div>
+          <Card key={item.id} oompaLoompa={item}>
+          </Card>
         )
         : null}
-    </>
+    </div>
   )
 }
 
