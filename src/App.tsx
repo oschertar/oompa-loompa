@@ -64,13 +64,16 @@ function App() {
           <h1>Oompa Loompa's Crew</h1>
         </div>
       </nav>
-      <main>
-        <div>
-          <input type="text" placeholder="Search" onChange={handleInputChange} />
+      <main className="container">
+        <div className="filters">
+          <div className="search-filter">
+            <input type="text" placeholder="Search" onChange={handleInputChange} />
+          </div>
         </div>
+
         <h2>Find our Oompa Loompa</h2>
         <h3>There are more than 100k</h3>
-        <div className="grid container">
+        <div className="grid">
           {filteredData.length ?
             filteredData.map((item: OompaLoompa) =>
               <Card key={item.id} oompaLoompa={item}>
