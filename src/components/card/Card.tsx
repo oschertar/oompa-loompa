@@ -5,11 +5,11 @@ import "./Card.css"
 function Card({ oompaLoompa }: { oompaLoompa: OompaLoompa }) {
 
     return (
-        <Link to={`/${oompaLoompa.id}`} className="card">
+        <Link to={`/${oompaLoompa.id}`} className="card details">
             <img src={oompaLoompa.image} alt={oompaLoompa.first_name}></img>
-            <p>{oompaLoompa.first_name} {oompaLoompa.last_name}</p>
+            <p className="title">{oompaLoompa.first_name} {oompaLoompa.last_name}</p>
             <span>{oompaLoompa.gender === "M" ? "Man" : "Woman"}</span>
-            <span>{oompaLoompa.profession}</span>
+            <span className="profession">{oompaLoompa.profession}</span>
         </Link>)
 }
 

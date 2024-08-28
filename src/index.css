@@ -37,3 +37,19 @@ h3 {
   max-width: 1320px;
   margin: 0 auto;
 }
+
+.details p.title {
+  margin: 8px 0 0;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.details span {
+  display: block;
+  color: #9b9b9b;
+  font-size: 16px;
+}
+
+.details span.profession {
+  font-style: italic;
+}

@@ -1,0 +1,17 @@
+.details-container {
+  display: flex;
+  margin-top: 40px;
+  gap: 32px;
+}
+
+.details-container img {
+  width: 50%;
+}
+
+.details-container .details {
+  width: 50%;
+}
+
+.details-container .details .description {
+  margin-top: 40px;
+}
