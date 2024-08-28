@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
-import { ApiResponse } from "../types/api";
+import { ApiResponse, OompaLoompa } from "../types/api";
 
 class ApiService {
   private axiosInstance: AxiosInstance;
@@ -29,9 +29,9 @@ class ApiService {
     }
   }
 
-  public async getOompaLoompaById(id: number): Promise<ApiResponse> {
+  public async getOompaLoompaById(id: string): Promise<OompaLoompa> {
     try {
-      const response: AxiosResponse<ApiResponse> = await this.axiosInstance.get(
+      const response: AxiosResponse<OompaLoompa> = await this.axiosInstance.get(
         `/${id}`
       );
       return response.data;

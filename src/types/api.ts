@@ -5,7 +5,7 @@ export interface ApiResponse {
 }
 
 export interface OompaLoompa {
-  id: number;
+  id?: number;
   first_name: string;
   last_name: string;
   favorite: FavoriteScheme;
@@ -16,6 +16,8 @@ export interface OompaLoompa {
   age: number;
   country: string;
   height: number;
+  quota?: string;
+  description?: string;
 }
 
 export interface FavoriteScheme {
