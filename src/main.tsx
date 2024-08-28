@@ -7,12 +7,19 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './pages/Home.tsx';
+import Details from './pages/Details.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <Home></Home>
+    ),
+  },
+  {
+    path: "/:id",
+    element: (
+      <Details></Details>
     ),
   }
 ]);
