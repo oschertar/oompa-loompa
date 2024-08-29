@@ -1,25 +1,16 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { apiService } from "../../services/api";
-import { OompaLoompa } from "../../types/api";
 import "./Details.css"
 import DOMPurify from 'dompurify';
+import { useGetOompaLoompasByIdQuery } from "../../redux/apiSlice";
+import invariant from "tiny-invariant";
 
 
 function Details() {
     const params = useParams();
 
-    const [detailsOompa, setDetailsOompa] = useState<OompaLoompa>();
+    invariant(params.id, 'Id is required for access this page');
+    const { data: detailsOompa } = useGetOompaLoompasByIdQuery(params.id);
 
-    useEffect(() => {
-        if (params.id)
-            apiService.getOompaLoompaById(params.id).then((res: OompaLoompa) => {
-                if (res.email) {
-                    setDetailsOompa(res);
-
-                }
-            })
-    }, [params])
 
     return (
         <>

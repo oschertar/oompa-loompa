@@ -63,8 +63,6 @@ function Home() {
                 </div>
             </div>
 
-
-
             <h2>Find our Oompa Loompa</h2>
             <h3>There are more than 100k</h3>
             <div className="grid">

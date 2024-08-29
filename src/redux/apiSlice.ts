@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { ApiResponse } from "../types/api";
+import { ApiResponse, OompaLoompa } from "../types/api";
 
 export const apiSlice = createApi({
   reducerPath: "api",
@@ -11,7 +11,11 @@ export const apiSlice = createApi({
     getOompaLoompas: builder.query<ApiResponse, number>({
       query: (page) => `/oompa-loompas?page=${page}`,
     }),
+    getOompaLoompasById: builder.query<OompaLoompa, string>({
+      query: (id) => `/oompa-loompas/${id}`,
+    }),
   }),
 });
 
-export const { useGetOompaLoompasQuery } = apiSlice;
+export const { useGetOompaLoompasQuery, useGetOompaLoompasByIdQuery } =
+  apiSlice;
