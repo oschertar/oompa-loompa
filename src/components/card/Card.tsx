@@ -6,7 +6,7 @@ function Card({ oompaLoompa }: { oompaLoompa: OompaLoompa }) {
 
     return (
         <Link to={`/${oompaLoompa.id}`} className="card details">
-            <img src={oompaLoompa.image} alt={oompaLoompa.first_name}></img>
+            <img loading="lazy" src={oompaLoompa.image} alt={oompaLoompa.first_name} />
             <p className="title">{oompaLoompa.first_name} {oompaLoompa.last_name}</p>
             <span>{oompaLoompa.gender === "M" ? "Man" : "Woman"}</span>
             <span className="profession">{oompaLoompa.profession}</span>
