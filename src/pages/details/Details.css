@@ -15,3 +15,14 @@
 .details-container .details .description {
   margin-top: 40px;
 }
+
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+  }
+
+  .details-container img,
+  .details-container .details {
+    width: 100%;
+  }
+}
