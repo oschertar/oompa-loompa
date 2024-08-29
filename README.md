@@ -63,3 +63,10 @@ Below, I detail the problems and considerations I had while developing the techn
 - When changing to react-redux, I have realized that the apiService file is not necessary. Even so I have left it uploaded in case the project does not make use of react-redux.
 - When implementing react-redux with the cache system, I have had some problems in the implementation of it.
 - I haven't considered necessary to use SASS or any component library because the project itself is quite simple and it seemed to me an unnecessary load.
+
+## Libraries used
+
+- react-redux
+- react-router
+- dompurify
+- tiny-invariant
