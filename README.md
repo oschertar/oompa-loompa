@@ -1,50 +1,65 @@
-# React + TypeScript + Vite
+# Oompa Loompa Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a React application integrated with Redux and TypeScript. Below you'll find instructions on how to get started, including setting up and running the server locally.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Before running the server locally, you will need have installed in your computer Node and a package manager like npm or yarn:
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+Follow these steps to set up the project and run it locally.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1. Clone the Repository
+
+Start by cloning the repository from GitHub:
+
+```bash
+git clone https://github.com/oschertar/oompa-loompa.git
+cd oompa-loompa
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Install the dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Use the command from your package manager to install all the dependencies.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm i
 ```
+
+or
+
+```bash
+yarn
+```
+
+### 3. Run the project in your computer
+
+To run the server on your computer, introduce the command:
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+yarn run dev
+```
+
+## Considerations
+
+Below, I detail the problems and considerations I had while developing the technical test:
+
+- In the design it is not well appreciated, but I have placed the bar with a sticky position so that it is always present.
+- Although I have not modified the design to fit what is requested, I would have made two changes in it:
+
+  - Place the filter input on the bar itself so that it is always accessible to the user.
+  - Place an arrow in the lower right area to be able to scroll to the top automatically.
+
+- When changing to react-redux, I have realized that the apiService file is not necessary. Even so I have left it uploaded in case the project does not make use of react-redux.
+- When implementing react-redux with the cache system, I have had some problems in the implementation of it.
+- I haven't considered necessary to use SASS or any component library because the project itself is quite simple and it seemed to me an unnecessary load.
